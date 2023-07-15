@@ -1,3 +1,3 @@
 # shalayiding.github.io
-My personal website build with Javascript, html/css.
-Check out the website [here]([URL](https://shalayiding.github.io/)https://shalayiding.github.io/).
+
+My personal website built with JavaScript, HTML/CSS. Check out the website [here](https://shalayiding.github.io/).
