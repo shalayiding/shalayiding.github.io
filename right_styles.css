@@ -1,0 +1,179 @@
+/* author aierken */
+.right {
+    margin-left: auto;
+    background-color: var(--color-secondary);
+    width: 70vw;
+    height: 100vh;
+    overflow: auto;
+    color: var(--font-color);
+}
+
+.right i {
+    color: var(--font-color);
+
+}
+
+.rightcontent {
+    /* margin-left: 5vw; */
+
+
+}
+
+
+.rightcontent .aboutme {
+    /* display: flex; */
+    /* align-items: center; */
+    /* margin-right: 4vw; */
+    margin-top: 4vw;
+    width: 40vw;
+    font-size: 1.1em;
+    margin-bottom: 1rem
+}
+
+.toollist {
+
+    margin-top: 6vw;
+    font-size: 1.1em;
+
+}
+
+.chart_list {
+    display: flex;
+}
+
+
+.chart-container {
+    height: 425px;
+    width: 425px;
+    /* display: flex; */
+
+
+}
+
+.chart-container2 {
+    height: 425px;
+    width: 425px;
+    /* display: flex; */
+}
+
+
+
+
+
+/* project card ----------------------------------------------------------------------------- */
+
+.myproject {
+    font-size: 1.1em;
+
+}
+
+.projectlist {
+    margin-top: 50px;
+    margin-left: 90px;
+    height: 60vw;
+}
+
+.project-card-sm {
+    /*   max-width: 600px; */
+    width: 700px;
+    padding: 2.5px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.15);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.8s, box-shadow 0.4s;
+    margin-bottom: 30px;
+}
+
+.project-card-sm:hover {
+    transform: scale(1.025);
+    box-shadow: 0 0 100px -30px var(--project-effect-color);
+}
+
+
+.project-card-sm .card-border-gradient {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    height: 400%;
+    width: 10rem;
+    z-index: -1;
+    background: linear-gradient(to right, transparent, var(--project-effect-color), transparent);
+
+    transition: opacity 0.3s;
+    opacity: 0;
+
+    animation: animate-border-gradient 5s infinite linear;
+}
+
+.project-card-sm:hover .card-border-gradient {
+    opacity: 1;
+}
+
+@keyframes animate-border-gradient {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        transform-origin: bottom;
+    }
+}
+
+
+.project-card-sm .card-container {
+    display: grid;
+    grid-template-areas: "img img text text text";
+    gap: 1rem;
+    padding: 0.75rem;
+    border-radius: 12px;
+    height: 150px;
+    background-color: var(--project-card-background);
+    color: var(--font-color), 0.7;
+}
+
+.card-container img {
+    grid-area: img;
+    aspect-ratio: 25 / 14;
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.card-container .wrapper {
+    grid-area: text;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.card-container .wrapper h1 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--font-color);
+    margin-bottom: 0.75rem;
+}
+
+.card-container .wrapper button {
+    background: none;
+    border: none;
+
+    /* font: inherit; */
+    color: var(--font-color);
+    margin-top: 1.4rem;
+
+}
+
+.card-container .wrapper button i {
+    margin-left: .5rem;
+    transition: margin 0.3s;
+}

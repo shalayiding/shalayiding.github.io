@@ -1,0 +1,237 @@
+/* author aierken */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+
+
+.theme-light {
+    --color-primary: #0060df;
+    --color-secondary: #fbfbfe;
+    --color-accent: #fd6f53;
+    --font-color: #000000;
+    --project-effect-color: black;
+    --project-card-background: hsl(0, 0%, 90%);
+}
+
+.theme-dark {
+    --color-primary: #17ed90;
+    --color-secondary: #000000;
+    --color-accent: #12cdea;
+    --font-color: #ffffff;
+    --project-effect-color: #6f45dc;
+    --project-card-background: hsl(0, 0%, 10%);
+}
+
+.screenview {
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    background-color: var(--color-secondary);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 30vw;
+    overflow: auto;
+    color: var(--font-color);
+    margin-bottom: 10px;
+}
+
+/* Media query for phone view */
+@media (max-width: 768px) {
+    .screenview {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        position: static;
+        width: 100%;
+    }
+}
+
+
+
+
+.leftcontent {
+    margin-top: 4vw;
+    margin-left: 12.5vw;
+    margin-right: 2vw;
+}
+
+
+.profileImage {
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 65%;
+    box-shadow: 5px 10px 20px;
+    box-shadow: var(--font-color);
+}
+
+
+
+
+/* toggle swith ---------------------------------------------------------------------------- */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    animation: toggle__animation 3s infinite;
+}
+
+.switch::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    filter: blur(20px);
+    z-index: -1;
+    border-radius: 50px;
+    background-color: #5a686e;
+    background-image: radial-gradient(at 21% 46%, hsla(183, 65%, 60%, 1) 0px, transparent 50%),
+        radial-gradient(at 23% 25%, hsla(359, 74%, 70%, 1) 0px, transparent 50%),
+        radial-gradient(at 20% 1%, hsla(267, 83%, 75%, 1) 0px, transparent 50%),
+        radial-gradient(at 86% 87%, hsla(204, 69%, 68%, 1) 0px, transparent 50%),
+        radial-gradient(at 99% 41%, hsla(171, 72%, 77%, 1) 0px, transparent 50%),
+        radial-gradient(at 55% 24%, hsla(138, 60%, 62%, 1) 0px, transparent 50%);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--font-color);
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    left: 0.3em;
+    bottom: 0.35em;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -10px 10px 0px inset,
+        rgba(0, 0, 0, 0.09) 0px -1px 15px -8px;
+    background-color: #ff99fd;
+    background-image: radial-gradient(at 81% 39%, hsla(327, 79%, 79%, 1) 0px, transparent 50%),
+        radial-gradient(at 11% 72%, hsla(264, 64%, 79%, 1) 0px, transparent 50%),
+        radial-gradient(at 23% 20%, hsla(75, 98%, 71%, 1) 0px, transparent 50%);
+}
+
+.input__check:checked+.slider:before {
+    transform: translateX(1.5em);
+}
+
+@keyframes toggle__animation {
+
+    0%,
+    100% {
+        transform: translateY(-10px) rotateX(15deg) rotateY(-20deg);
+    }
+
+    50% {
+        transform: translateY(0px) rotateX(15deg) rotateY(-20deg);
+    }
+}
+
+
+
+/* radio button format ------------------------------------------------------------------------------ */
+.navg {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge;
+    border-color: var(--font-color);
+    outline: none;
+    background-color: transparent;
+    color: var(--font-color);
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.navg::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: var(--color-secondary);
+    transition: 0.5s;
+    transform-origin: center;
+}
+
+.navg::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: var(--color-secondary);
+    transition: 0.5s;
+}
+
+.navg:hover::before,
+.navg:hover::after {
+    transform: scale(0)
+}
+
+.navg:hover {
+    box-shadow: inset 0px 0px 25px;
+    box-shadow: var(--font-color);
+}
+
+
+.sociallink {
+    display: flex;
+    align-items: center;
+    margin-top: 3vw;
+
+}
+
+.sociallink i {
+    margin-right: 20px;
+    color: var(--font-color);
+    font-size: 35px;
+}

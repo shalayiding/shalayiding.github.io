@@ -1,0 +1,218 @@
+<!-- author aierken  -->
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AierkenWeb</title>
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+    <link rel="stylesheet" href="./right_styles.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/1.1.1/chartjs-plugin-annotation.min.js"></script>
+  </head>
+
+  <body>
+    <div class="screenview">
+      <div class="left">
+        <div class="leftcontent">
+          <h1>Aierken<br />Shalayiding</h1>
+          <img src="selfy.jpg" class="profileImage" />
+          <label class="switch">
+            <input
+              type="checkbox"
+              class="input__check"
+              onchange="toggleTheme()"
+            />
+            <span class="slider"></span>
+          </label>
+          <h2>Software Engineer</h2>
+
+          <p>Welcome to my website!</p>
+          <a
+            href="#section-aboutme"
+            style="text-decoration: none; color: inherit"
+          >
+            <button class="navg">About Me</button>
+          </a>
+          <a
+            href="#section-toollist"
+            style="text-decoration: none; color: inherit"
+          >
+            <button class="navg">What I Know</button>
+          </a>
+          <a
+            href="#section-projects"
+            style="text-decoration: none; color: inherit"
+          >
+            <button class="navg">My Projects</button>
+          </a>
+          <div class="sociallink">
+            <a href="https://github.com/shalayiding?tab=repositories">
+              <i class="fa fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/aierken-shalayiding-aa9959196/"
+            >
+              <i class="fa fa-linkedin-square"></i>
+            </a>
+            <a href="https://twitter.com/aierkennn">
+              <i class="fa fa-brands fa-twitter"></i>
+            </a>
+            <a href="mailto: aierken103@gmail.com">
+              <i class="fa fa-envelope-o"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="rightcontent">
+          <div class="aboutme">
+            <section id="section-aboutme">
+              <h2>About Me</h2>
+            </section>
+            <p>
+              I am a recent graduate from RIT with a Master's degree in Computer
+              Science. My passion lies in the fields of
+              <strong>machine learning</strong> and
+              <strong>computer graphics</strong>.
+            </p>
+            <p>
+              Feel free to explore my website to discover examples of my work.
+              Let's collaborate and shape the future through the convergence of
+              machine learning, computer graphics, and software engineering!
+            </p>
+          </div>
+          <div class="toollist">
+            <section id="section-toollist">
+              <h2>What I Know</h2>
+            </section>
+            <div class="chart_list">
+              <div class="chart-container">
+                <canvas id="radar-chart"></canvas>
+              </div>
+              <div class="chart-container2">
+                <canvas id="radar-chart2"></canvas>
+              </div>
+              <script src="mychart.js"></script>
+            </div>
+          </div>
+
+          <div class="myproject">
+            <section id="section-projects">
+              <h2>My Projects</h2>
+            </section>
+            <div class="projectlist">
+              <a
+                href="https://github.com/shalayiding/AI-ChatVision"
+                style="text-decoration: none; color: inherit"
+              >
+                <div class="project-card-sm">
+                  <div class="card-border-gradient"></div>
+                  <div class="card-container">
+                    <img src="./chatgpt_interface.png" alt="" />
+                    <div class="wrapper">
+                      <h1>AI-ChatVision</h1>
+                      <p>
+                        This project combines ChatGPT with the Stable Diffusion
+                        Image Model to enable users to have conversational
+                        interactions with ChatGPT and receive AI-generated
+                        images as responses.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="https://drive.google.com/file/d/1Aoapo4qJJVckGiHG6qc-8RCjkW0Veh2D/view"
+                style="text-decoration: none; color: inherit"
+              >
+                <div class="project-card-sm">
+                  <div class="card-border-gradient"></div>
+                  <div class="card-container">
+                    <img src="./ar_musicshow.png" alt="" />
+                    <div class="wrapper">
+                      <h1>AR/VR Immersive Music Show</h1>
+                      <p>
+                        In this project users are transported into a visually
+                        stunning virtual environment where they can interact
+                        with dynamic stage setups and synchronized music. The
+                        application aims to revolutionize music concerts by
+                        offering a captivating AR/VR experience on multiple
+                        platforms.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="https://github.com/shalayiding/Text2Speech"
+                style="text-decoration: none; color: inherit"
+              >
+                <div class="project-card-sm">
+                  <div class="card-border-gradient"></div>
+                  <div class="card-container">
+                    <img src="./text2speech_interface.png" alt="" />
+                    <div class="wrapper">
+                      <h1>Text2Speech</h1>
+                      <p>
+                        Text2Speech is a Windows application built with Python,
+                        Tinkers, and Edge-TTS that can convert text into audio
+                        speech. It allows users to generate spoken output from
+                        written input.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="https://github.com/shalayiding/RNN-Audio-Classification-Using-NSynth-Data-Set."
+                style="text-decoration: none; color: inherit"
+              >
+                <div class="project-card-sm">
+                  <div class="card-border-gradient"></div>
+                  <div class="card-container">
+                    <img src="./RNNnetwork_data.png" alt="" />
+                    <div class="wrapper">
+                      <h1>RNN-Audio-Classification</h1>
+                      <p>
+                        This project utilizes recurrent neural networks (RNNs)
+                        to classify audio samples from the NSynth dataset. It
+                        aims to develop an accurate system for identifying
+                        musical instruments and sound properties.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="https://github.com/shalayiding/AES-Encryption"
+                style="text-decoration: none; color: inherit"
+              >
+                <div class="project-card-sm">
+                  <div class="card-border-gradient"></div>
+                  <div class="card-container">
+                    <img src="./aes_encyption.png" alt="" />
+                    <div class="wrapper">
+                      <h1>AES Encryption</h1>
+                      <p>
+                        This project offers a robust implementation of the
+                        Advanced Encryption Standard (AES) algorithm in C++,
+                        providing a secure and efficient solution for encrypting
+                        and decrypting sensitive data.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
