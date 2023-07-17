@@ -13,6 +13,13 @@
 
 }
 
+
+
+
+
+
+
+
 .rightcontent {
     /* margin-left: 5vw; */
 
@@ -176,4 +183,36 @@
 .card-container .wrapper button i {
     margin-left: .5rem;
     transition: margin 0.3s;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .chart_list {
+        flex-direction: column;
+    }
+
+    .right {
+        position: static;
+        width: 100vw;
+    }
+
+    .rightcontent .aboutme {
+        width: 100vw;
+    }
+
+    .myproject {
+        height: 140vh;
+    }
+
+    .projectlist {
+        margin-left: 0px;
+
+    }
+
+    .project-card-sm {
+        width: 100vw;
+    }
+
 }

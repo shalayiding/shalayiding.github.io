@@ -42,7 +42,7 @@ body {
     width: 30vw;
     overflow: auto;
     color: var(--font-color);
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 /* Media query for phone view */
@@ -51,10 +51,9 @@ body {
         flex-direction: column;
     }
 
-    .left,
-    .right {
+    .left {
         position: static;
-        width: 100%;
+        width: 100vw;
     }
 }
 
