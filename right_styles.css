@@ -2,7 +2,7 @@
 .right {
     margin-left: auto;
     background-color: var(--color-secondary);
-    width: 70vw;
+    width: 76vw;
     height: 100vh;
     overflow: auto;
     color: var(--font-color);
@@ -39,13 +39,14 @@
 
 .toollist {
 
-    margin-top: 6vw;
+    margin-top: 1vw;
     font-size: 1.1em;
 
 }
 
 .chart_list {
     display: flex;
+    justify-content: space-evenly;
 }
 
 
@@ -75,14 +76,21 @@
 }
 
 .projectlist {
-    margin-top: 50px;
-    margin-left: 90px;
+    margin-top: 1vw;
+    /* margin-left: 2vw; */
     height: 60vw;
+
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow projects to wrap to the next line when needed */
+
 }
+
+
 
 .project-card-sm {
     /*   max-width: 600px; */
-    width: 700px;
+    width: 35vw;
     padding: 2.5px;
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.15);
@@ -96,6 +104,7 @@
 
     transition: transform 0.8s, box-shadow 0.4s;
     margin-bottom: 30px;
+    margin-left: 15px;
 }
 
 .project-card-sm:hover {
@@ -150,7 +159,7 @@
 .card-container img {
     grid-area: img;
     aspect-ratio: 25 / 14;
-    width: 100%;
+    width: 13vw;
     border-radius: 8px;
     height: auto;
     transition: transform 0.3s;
@@ -160,6 +169,7 @@
     grid-area: text;
     font-size: 0.9rem;
     line-height: 1.4;
+    width: 17vw;
 }
 
 .card-container .wrapper h1 {

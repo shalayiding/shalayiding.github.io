@@ -39,7 +39,7 @@ body {
     top: 0;
     bottom: 0;
     left: 0;
-    width: 30vw;
+    width: 24vw;
     overflow: auto;
     color: var(--font-color);
     /* margin-bottom: 10px; */
@@ -62,7 +62,7 @@ body {
 
 .leftcontent {
     margin-top: 4vw;
-    margin-left: 12.5vw;
+    margin-left: 10vw;
     margin-right: 2vw;
 }
 
