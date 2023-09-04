@@ -20,22 +20,71 @@
 
 
 
-.rightcontent {
-    /* margin-left: 5vw; */
+.myinfo {
+    margin-top: 4vw;
+    display: flex;
+    font-size: 1.1em;
+}
 
 
+.education {
+    margin-top: 4vw;
+    width: 40vw;
+    margin-bottom: 1rem;
+    align-items: center;
+
+}
+
+.RITcard {
+    width: 25vw;
+    height: 50px;
+    /* background: #282727; */
+    box-shadow: 4px 1px 25px rgba(255, 255, 255, 0.2);
+    margin: 13px;
+    border-radius: 15px;
+    padding: 10px;
+    padding: 0.7em;
+    display: flex;
+    justify-content: space-around;
+    color: var(--education-card-fontcolor);
+    background-color: var(--education-card-background);
+    align-items: center;
+
+
+}
+
+.RITcard img {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+    border-radius: 50%;
+    background-size: 200% 100%;
+
+}
+
+.RITinfo h4,
+.RITinfo p {
+    font-size: 0.8em;
+    display: inline-block;
+    padding: 0;
+    /* margin: 0; */
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 7px;
 }
 
 
 .rightcontent .aboutme {
     /* display: flex; */
     /* align-items: center; */
-    /* margin-right: 4vw; */
-    margin-top: 4vw;
+    /* margin-right: 5vw; */
+    margin-left: 2vw;
     width: 40vw;
-    font-size: 1.1em;
-    margin-bottom: 1rem
 }
+
+
+
+
 
 .toollist {
 
@@ -50,18 +99,18 @@
 }
 
 
+
+
+
 .chart-container {
-    height: 425px;
-    width: 425px;
+    height: 26vw;
+    width: 35vw;
     /* display: flex; */
-
-
 }
 
 .chart-container2 {
-    height: 425px;
-    width: 425px;
-    /* display: flex; */
+    height: 26vw;
+    width: 35vw;
 }
 
 
@@ -151,7 +200,6 @@
     gap: 1rem;
     padding: 0.75rem;
     border-radius: 12px;
-    height: 150px;
     background-color: var(--project-card-background);
     color: var(--font-color), 0.7;
 }
@@ -159,7 +207,7 @@
 .card-container img {
     grid-area: img;
     aspect-ratio: 25 / 14;
-    width: 13vw;
+    width: 15vw;
     border-radius: 8px;
     height: auto;
     transition: transform 0.3s;

@@ -17,6 +17,8 @@ body {
     --font-color: #000000;
     --project-effect-color: black;
     --project-card-background: hsl(0, 0%, 90%);
+    --education-card-background: hsl(0, 0%, 10%);
+    --education-card-fontcolor: #ffffff;
 }
 
 .theme-dark {
@@ -26,6 +28,8 @@ body {
     --font-color: #ffffff;
     --project-effect-color: #6f45dc;
     --project-card-background: hsl(0, 0%, 10%);
+    --education-card-background: hsl(0, 0%, 90%);
+    --education-card-fontcolor: #000000;
 }
 
 .screenview {
@@ -62,7 +66,7 @@ body {
 
 .leftcontent {
     margin-top: 4vw;
-    margin-left: 10vw;
+    margin-left: 5vw;
     margin-right: 2vw;
 }
 
