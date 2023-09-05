@@ -139,7 +139,7 @@
 
 .project-card-sm {
     /*   max-width: 600px; */
-    width: 650px;
+    width: 35vw;
     padding: 2.5px;
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.15);
