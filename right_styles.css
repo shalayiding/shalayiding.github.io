@@ -103,14 +103,14 @@
 
 
 .chart-container {
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     /* display: flex; */
 }
 
 .chart-container2 {
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
 }
 
 
@@ -139,7 +139,7 @@
 
 .project-card-sm {
     /*   max-width: 600px; */
-    width: 35vw;
+    width: 600px;
     padding: 2.5px;
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.15);
@@ -208,11 +208,11 @@
 .card-container img {
     grid-area: img;
     aspect-ratio: 26 / 14;
-    width: 100%;
+    width: 90%;
     border-radius: 8px;
-    max-width: 100%;
+    max-width: 90%;
     /* Ensure the image doesn't exceed the container width */
-    max-height: 100%;
+    max-height: 70%;
     height: auto;
     transition: transform 0.3s;
 }

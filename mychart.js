@@ -3,7 +3,7 @@
 
 
 var label_string = ['C/C++', 'Python', 'JavaScript', 'Java', 'Matlab', 'SQL', 'PHP', 'C#'];
-var label_data = [90, 90, 80, 40, 70, 95, 55, 74];
+var label_data = [95, 95, 80, 40, 70, 95, 55, 74];
 
 // Light theme options
 var lightOptions = {
