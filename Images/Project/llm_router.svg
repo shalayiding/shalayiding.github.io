@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="100%" style="stop-color:#1a1a3e"/>
+    </linearGradient>
+    <linearGradient id="line1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.8"/>
+    </linearGradient>
+    <linearGradient id="line2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.8"/>
+    </linearGradient>
+    <linearGradient id="line3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0.8"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="300" fill="url(#bg)" rx="12"/>
+
+  <!-- Grid lines subtle -->
+  <line x1="0" y1="60" x2="600" y2="60" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="0" y1="150" x2="600" y2="150" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="0" y1="240" x2="600" y2="240" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="150" y1="0" x2="150" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="300" y1="0" x2="300" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="450" y1="0" x2="450" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+  <!-- Input node -->
+  <circle cx="100" cy="150" r="28" fill="#6366f1" opacity="0.2" filter="url(#glow)"/>
+  <circle cx="100" cy="150" r="18" fill="#6366f1" opacity="0.9"/>
+  <text x="100" y="155" text-anchor="middle" fill="white" font-size="10" font-family="monospace" font-weight="bold">INPUT</text>
+
+  <!-- Router node center -->
+  <rect x="255" y="120" width="90" height="60" rx="10" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="300" y="145" text-anchor="middle" fill="#a5b4fc" font-size="9" font-family="monospace">ROUTER</text>
+  <text x="300" y="162" text-anchor="middle" fill="white" font-size="8" font-family="monospace">AI</text>
+
+  <!-- Output nodes -->
+  <circle cx="500" cy="75" r="22" fill="#06b6d4" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="500" cy="75" r="14" fill="#06b6d4" opacity="0.9"/>
+  <text x="500" y="79" text-anchor="middle" fill="white" font-size="8" font-family="monospace" font-weight="bold">GPT</text>
+
+  <circle cx="500" cy="150" r="22" fill="#10b981" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="500" cy="150" r="14" fill="#10b981" opacity="0.9"/>
+  <text x="500" y="154" text-anchor="middle" fill="white" font-size="8" font-family="monospace" font-weight="bold">Claude</text>
+
+  <circle cx="500" cy="225" r="22" fill="#f59e0b" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="500" cy="225" r="14" fill="#f59e0b" opacity="0.9"/>
+  <text x="500" y="229" text-anchor="middle" fill="white" font-size="7" font-family="monospace" font-weight="bold">Gemini</text>
+
+  <!-- Connecting lines -->
+  <line x1="118" y1="150" x2="255" y2="150" stroke="url(#line1)" stroke-width="2" stroke-dasharray="5,3"/>
+  <line x1="345" y1="138" x2="486" y2="80" stroke="url(#line1)" stroke-width="2" stroke-dasharray="5,3"/>
+  <line x1="345" y1="150" x2="486" y2="150" stroke="url(#line2)" stroke-width="2" stroke-dasharray="5,3"/>
+  <line x1="345" y1="162" x2="486" y2="220" stroke="url(#line3)" stroke-width="2" stroke-dasharray="5,3"/>
+
+  <!-- Label -->
+  <text x="20" y="285" fill="rgba(255,255,255,0.3)" font-size="10" font-family="monospace">LLM Router — Intelligent Model Dispatch</text>
+</svg>

@@ -12,16 +12,20 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="./script.js"></script>
+    <script src="./effects.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/1.1.1/chartjs-plugin-annotation.min.js"></script>
   </head>
 
   <body>
+    <canvas id="particle-canvas"></canvas>
     <div class="screenview">
       <div class="left">
         <div class="leftcontent">
-          <h1>Aierken<br />Shalayiding</h1>
-          <img src="Images/Others/selfy.jpg" class="profileImage" />
+          <h1 class="glitch" data-text="Aierken">Aierken</h1>
+          <div class="profile-glow-ring">
+            <img src="Images/Others/selfy.jpg" class="profileImage" />
+          </div>
           <label class="switch">
             <input
               type="checkbox"
@@ -30,7 +34,7 @@
             />
             <span class="slider"></span>
           </label>
-          <h2>Software Engineer</h2>
+          <h2 id="typing-text"></h2>
 
           <p>Welcome to my website!</p>
           <a
@@ -158,7 +162,7 @@
                 <div class="project-card-sm">
                   <div class="card-border-gradient"></div>
                   <div class="card-container">
-                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" />
+                    <img src="Images/Project/llm_router.svg" alt="LLM Router" />
                     <div class="wrapper">
                       <h1>LLM Router</h1>
                       <p>
@@ -176,7 +180,7 @@
                 <div class="project-card-sm">
                   <div class="card-border-gradient"></div>
                   <div class="card-container">
-                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" />
+                    <img src="Images/Project/mcp_get.svg" alt="mcp-get" />
                     <div class="wrapper">
                       <h1>mcp-get</h1>
                       <p>
@@ -194,7 +198,7 @@
                 <div class="project-card-sm">
                   <div class="card-border-gradient"></div>
                   <div class="card-container">
-                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" />
+                    <img src="Images/Project/poemcp.svg" alt="PoeMCP" />
                     <div class="wrapper">
                       <h1>PoeMCP</h1>
                       <p>

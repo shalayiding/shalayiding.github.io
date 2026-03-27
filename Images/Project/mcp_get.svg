@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="300" fill="url(#bg)" rx="12"/>
+
+  <!-- Terminal window chrome -->
+  <rect x="20" y="20" width="560" height="260" rx="8" fill="#1c2128" stroke="#30363d" stroke-width="1"/>
+  <!-- Title bar -->
+  <rect x="20" y="20" width="560" height="32" rx="8" fill="#2d333b"/>
+  <rect x="20" y="36" width="560" height="16" fill="#2d333b"/>
+  <!-- Traffic lights -->
+  <circle cx="44" cy="36" r="7" fill="#ff5f56"/>
+  <circle cx="64" cy="36" r="7" fill="#ffbd2e"/>
+  <circle cx="84" cy="36" r="7" fill="#27c93f"/>
+  <!-- Title -->
+  <text x="300" y="41" text-anchor="middle" fill="#768390" font-size="11" font-family="monospace">Terminal</text>
+
+  <!-- Terminal content -->
+  <text x="40" y="80" fill="#768390" font-size="12" font-family="monospace">$</text>
+  <text x="55" y="80" fill="#e6edf3" font-size="12" font-family="monospace">pip install mcp-get</text>
+
+  <text x="40" y="105" fill="#3fb950" font-size="11" font-family="monospace">✓ mcp-get installed successfully</text>
+
+  <text x="40" y="135" fill="#768390" font-size="12" font-family="monospace">$</text>
+  <text x="55" y="135" fill="#e6edf3" font-size="12" font-family="monospace">mcp install github</text>
+  <text x="40" y="157" fill="#3fb950" font-size="11" font-family="monospace">✓ Configured for Claude Desktop, Cursor</text>
+
+  <text x="40" y="185" fill="#768390" font-size="12" font-family="monospace">$</text>
+  <text x="55" y="185" fill="#e6edf3" font-size="12" font-family="monospace">mcp install playwright</text>
+  <text x="40" y="207" fill="#3fb950" font-size="11" font-family="monospace">✓ Configured for VS Code, Windsurf</text>
+
+  <text x="40" y="235" fill="#768390" font-size="12" font-family="monospace">$</text>
+  <text x="55" y="235" fill="#e6edf3" font-size="12" font-family="monospace">mcp list</text>
+  <text x="40" y="257" fill="#58a6ff" font-size="11" font-family="monospace">github  playwright  filesystem  postgres</text>
+
+  <!-- Cursor blink rect -->
+  <rect x="89" y="243" width="8" height="14" fill="#e6edf3" opacity="0.8"/>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0f"/>
+      <stop offset="50%" style="stop-color:#1a0a0a"/>
+      <stop offset="100%" style="stop-color:#0f0a1a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c9a84c"/>
+      <stop offset="100%" style="stop-color:#f0d060"/>
+    </linearGradient>
+    <radialGradient id="glow-center" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#c9a84c;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#c9a84c;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="blur-glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="300" fill="url(#bg)" rx="12"/>
+
+  <!-- Atmospheric glow -->
+  <ellipse cx="300" cy="150" rx="200" ry="120" fill="url(#glow-center)"/>
+
+  <!-- Decorative lines -->
+  <line x1="0" y1="150" x2="180" y2="150" stroke="#c9a84c" stroke-width="0.5" opacity="0.3"/>
+  <line x1="420" y1="150" x2="600" y2="150" stroke="#c9a84c" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Gem shape center -->
+  <polygon points="300,60 360,130 300,180 240,130" fill="none" stroke="url(#gold)" stroke-width="1.5" opacity="0.8" filter="url(#blur-glow)"/>
+  <polygon points="300,80 345,130 300,165 255,130" fill="#c9a84c" opacity="0.08"/>
+
+  <!-- Inner gem lines -->
+  <line x1="300" y1="60" x2="300" y2="180" stroke="#c9a84c" stroke-width="0.7" opacity="0.4"/>
+  <line x1="240" y1="130" x2="360" y2="130" stroke="#c9a84c" stroke-width="0.7" opacity="0.4"/>
+
+  <!-- POE MCP text -->
+  <text x="300" y="122" text-anchor="middle" fill="url(#gold)" font-size="28" font-family="Georgia, serif" font-weight="bold" letter-spacing="6" filter="url(#blur-glow)">PoE</text>
+  <text x="300" y="148" text-anchor="middle" fill="url(#gold)" font-size="13" font-family="Georgia, serif" letter-spacing="8" opacity="0.85">MCP</text>
+
+  <!-- Corner ornaments -->
+  <text x="30" y="50" fill="#c9a84c" font-size="20" opacity="0.4">✦</text>
+  <text x="555" y="50" fill="#c9a84c" font-size="20" opacity="0.4">✦</text>
+  <text x="30" y="275" fill="#c9a84c" font-size="20" opacity="0.4">✦</text>
+  <text x="555" y="275" fill="#c9a84c" font-size="20" opacity="0.4">✦</text>
+
+  <!-- Subtitle -->
+  <text x="300" y="220" text-anchor="middle" fill="#c9a84c" font-size="10" font-family="Georgia, serif" opacity="0.6" letter-spacing="2">PATH OF EXILE · AI ASSISTANT</text>
+  <text x="300" y="240" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="9" font-family="monospace">gems · items · passive tree · live pricing</text>
+
+  <!-- Horizontal rule -->
+  <line x1="150" y1="205" x2="450" y2="205" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/>
+  <line x1="200" y1="250" x2="400" y2="250" stroke="#c9a84c" stroke-width="0.5" opacity="0.2"/>
+</svg>

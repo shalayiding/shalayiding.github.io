@@ -46,7 +46,6 @@ body {
     width: 24vw;
     overflow: auto;
     color: var(--font-color);
-    /* margin-bottom: 10px; */
 }
 
 /* Media query for phone view */
@@ -238,4 +237,205 @@ body {
     margin-right: 20px;
     color: var(--font-color);
     font-size: 35px;
+}
+
+
+/* ── Glitch effect on name ── */
+.glitch {
+    position: relative;
+}
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.glitch::before {
+    color: #0ff;
+    clip-path: polygon(0 20%, 100% 20%, 100% 40%, 0 40%);
+    animation: glitch-top 5s infinite;
+}
+.glitch::after {
+    color: #f0f;
+    clip-path: polygon(0 60%, 100% 60%, 100% 80%, 0 80%);
+    animation: glitch-bot 5s infinite;
+}
+@keyframes glitch-top {
+    0%, 90%, 100% { opacity: 0; transform: none; }
+    92% { opacity: 1; transform: translateX(-4px); }
+    94% { opacity: 1; transform: translateX(4px); }
+    96% { opacity: 0; }
+}
+@keyframes glitch-bot {
+    0%, 90%, 100% { opacity: 0; transform: none; }
+    93% { opacity: 1; transform: translateX(4px); }
+    95% { opacity: 1; transform: translateX(-4px); }
+    97% { opacity: 0; }
+}
+
+
+/* ── Profile glow ring ── */
+.profile-glow-ring {
+    display: inline-block;
+    margin-top: 24px;
+    border-radius: 65%;
+    padding: 3px;
+    background: linear-gradient(135deg, #64b4ff, #a855f7, #64b4ff);
+    background-size: 200% 200%;
+    animation: ring-spin 4s linear infinite;
+    transition: box-shadow 0.3s;
+}
+.profile-glow-ring:hover {
+    box-shadow: 0 0 25px rgba(100, 180, 255, 0.6);
+}
+@keyframes ring-spin {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.profile-glow-ring .profileImage {
+    margin-top: 0;
+    display: block;
+}
+
+
+/* ── Particle canvas ── */
+#particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9998;
+}
+.leftcontent {
+    position: relative;
+    z-index: 1;
+}
+.screenview {
+    position: relative;
+    z-index: 1;
+}
+.right {
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Typing h2 fixed height to prevent layout jump ── */
+#typing-text {
+    min-height: 1.4em;
+}
+
+
+/* ── Nav button ripple ── */
+.navg {
+    overflow: hidden;
+}
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(0);
+    animation: ripple-anim 0.6s linear;
+    pointer-events: none;
+}
+@keyframes ripple-anim {
+    to { transform: scale(2.5); opacity: 0; }
+}
+
+
+/* ── Skill tag fill animation ── */
+.tag {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: color 0.3s, opacity 0.2s;
+}
+.tag::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--font-color);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+.tag:hover::before {
+    transform: translateX(0);
+}
+.tag:hover {
+    color: var(--color-secondary);
+    opacity: 1;
+}
+
+
+/* ── Section h2 underline slide ── */
+.myinfo h2,
+.toollist h2,
+.myproject h2 {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 6px;
+}
+.myinfo h2::after,
+.toollist h2::after,
+.myproject h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--font-color);
+    transition: width 0.4s ease;
+}
+.revealed .myinfo h2::after,
+.toollist h2::after,
+.myproject h2::after,
+.myinfo h2::after {
+    width: 100%;
+}
+
+
+/* ── Typing cursor ── */
+#typing-text::after {
+    content: '|';
+    animation: blink 0.7s step-end infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+
+/* ── Scroll reveal ── */
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ── Cursor glow ── */
+#cursor-glow {
+    position: fixed;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(100, 180, 255, 0.1) 0%, transparent 65%);
 }
