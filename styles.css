@@ -17,8 +17,8 @@ body {
     --font-color: #000000;
     --project-effect-color: black;
     --project-card-background: hsl(0, 0%, 90%);
-    --education-card-background: hsl(0, 0%, 10%);
-    --education-card-fontcolor: #ffffff;
+    --exp-card-background: hsl(0, 0%, 92%);
+    --exp-card-fontcolor: #000000;
 }
 
 .theme-dark {
@@ -28,8 +28,8 @@ body {
     --font-color: #ffffff;
     --project-effect-color: #6f45dc;
     --project-card-background: hsl(0, 0%, 10%);
-    --education-card-background: hsl(0, 0%, 90%);
-    --education-card-fontcolor: #000000;
+    --exp-card-background: hsl(0, 0%, 15%);
+    --exp-card-fontcolor: #ffffff;
 }
 
 .screenview {
@@ -65,16 +65,17 @@ body {
 
 
 .leftcontent {
-    margin-top: 4vw;
+    margin-top: 5vw;
     margin-left: 5vw;
-    margin-right: 2vw;
+    margin-right: 3vw;
+    font-size: 1.15em;
 }
 
 
 .profileImage {
-    margin-top: 20px;
-    width: 150px;
-    height: 150px;
+    margin-top: 24px;
+    width: 190px;
+    height: 190px;
     border-radius: 65%;
     box-shadow: 5px 10px 20px;
     box-shadow: var(--font-color);

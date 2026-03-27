@@ -23,63 +23,87 @@
 .myinfo {
     margin-top: 20px;
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     font-size: 1.1em;
+    padding: 0 2vw;
+    gap: 3vw;
 }
 
 
-.education {
-    margin-top: 20px;
-    width: 400px;
-    margin-bottom: 1rem;
-    align-items: center;
-
+.experience {
+    margin-top: 10px;
+    flex: 0 0 380px;
+    margin-bottom: 1.5rem;
 }
 
-.RITcard {
-    width: 400px;
-    height: 50px;
-    /* background: #282727; */
+.exp-card {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 80px;
     box-shadow: 4px 1px 25px rgba(255, 255, 255, 0.2);
-    margin: 13px;
+    margin: 16px 0;
     border-radius: 15px;
-    padding: 10px;
-    padding: 0.7em;
+    padding: 0.9em 1.2em;
     display: flex;
-    justify-content: space-around;
-    color: var(--education-card-fontcolor);
-    background-color: var(--education-card-background);
     align-items: center;
-
-
+    color: var(--exp-card-fontcolor);
+    background-color: var(--exp-card-background);
 }
 
-.RITcard img {
-    width: 70px;
-    height: 70px;
-    background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+.exp-card img {
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
-    background-size: 200% 100%;
-
+    object-fit: contain;
+    background-color: #fff;
+    flex-shrink: 0;
+    margin-right: 14px;
+    padding: 4px;
 }
 
-.RITinfo h4,
-.RITinfo p {
-    font-size: 0.8em;
-    display: inline-block;
+.exp-info h4,
+.exp-info p {
+    font-size: 0.85em;
+    display: block;
     padding: 0;
-    /* margin: 0; */
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 7px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 0;
+}
+
+.exp-info h4 {
+    font-size: 1em;
 }
 
 
 .rightcontent .aboutme {
-    /* display: flex; */
-    /* align-items: center; */
-    /* margin-right: 5vw; */
-    margin-left: 20px;
-    width: 40%;
+    flex: 1;
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 1.5rem;
+    min-width: 0;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.tag {
+    font-size: 0.78em;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1.5px solid var(--font-color);
+    opacity: 0.65;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+
+.tag:hover {
+    opacity: 1;
 }
 
 
@@ -95,7 +119,9 @@
 
 .chart_list {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 2vw;
+    padding: 0 2vw;
 }
 
 
@@ -103,14 +129,17 @@
 
 
 .chart-container {
-    height: 300px;
-    width: 300px;
-    /* display: flex; */
+    flex: 1;
+    min-width: 0;
+    max-width: 500px;
+    aspect-ratio: 1;
 }
 
 .chart-container2 {
-    height: 300px;
-    width: 300px;
+    flex: 1;
+    min-width: 0;
+    max-width: 500px;
+    aspect-ratio: 1;
 }
 
 
@@ -126,13 +155,9 @@
 
 .projectlist {
     margin-top: 1vw;
-    /* margin-left: 2vw; */
-    height: 60vw;
-
     display: flex;
     flex-wrap: wrap;
-    /* Allow projects to wrap to the next line when needed */
-
+    align-items: flex-start;
 }
 
 
@@ -207,13 +232,11 @@
 
 .card-container img {
     grid-area: img;
-    aspect-ratio: 26 / 14;
-    width: 90%;
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
     border-radius: 8px;
-    max-width: 90%;
-    /* Ensure the image doesn't exceed the container width */
-    max-height: 70%;
-    height: auto;
+    align-self: center;
     transition: transform 0.3s;
 }
 
@@ -221,7 +244,7 @@
     grid-area: text;
     font-size: 0.9rem;
     line-height: 1.4;
-    width: 300px;
+    min-width: 0;
 }
 
 .card-container .wrapper h1 {
