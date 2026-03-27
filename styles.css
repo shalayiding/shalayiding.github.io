@@ -46,6 +46,7 @@ body {
     width: 24vw;
     overflow: auto;
     color: var(--font-color);
+    z-index: 2;
 }
 
 /* Media query for phone view */
@@ -402,6 +403,43 @@ body {
 }
 
 
+/* ── Particle cursor trail ── */
+.trail-dot {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9997;
+    transform: translate(-50%, -50%);
+    animation: trail-fade 0.8s ease-out forwards;
+}
+@keyframes trail-fade {
+    0%   { opacity: 0.9; transform: translate(-50%, -50%) scale(1); }
+    100% { opacity: 0;   transform: translate(-50%, -50%) scale(0.1); }
+}
+
+
+/* ── Aurora background ── */
+#aurora-bg {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+.aurora-blob {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(var(--color), 0.18) 0%, transparent 70%);
+    filter: blur(60px);
+    transform: translate(-50%, -50%);
+    transition: left 0.1s linear, top 0.1s linear;
+}
+
+
 /* ── Typing cursor ── */
 #typing-text::after {
     content: '|';
@@ -415,17 +453,6 @@ body {
 }
 
 
-/* ── Scroll reveal ── */
-.reveal-hidden {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.revealed {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 
 /* ── Cursor glow ── */

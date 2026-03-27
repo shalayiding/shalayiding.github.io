@@ -36,21 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // ── 2. Scroll reveal (only sections below the fold) ──────────
-    const scrollRoot = document.querySelector('.right');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('revealed');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { root: scrollRoot, threshold: 0.05 });
-
-    document.querySelectorAll('.toollist, .myproject').forEach(el => {
-        el.classList.add('reveal-hidden');
-        observer.observe(el);
-    });
 
 
     // ── 3. Project card 3D tilt ──────────────────────────────────
@@ -83,6 +68,61 @@ window.addEventListener('DOMContentLoaded', () => {
         glow.style.left = glowX + 'px';
         glow.style.top = glowY + 'px';
         requestAnimationFrame(animateGlow);
+    })();
+
+
+    // ── 6. Particle cursor trail ─────────────────────────────────
+    const trailColors = ['#64b4ff', '#a855f7', '#10b981', '#f59e0b', '#ec4899'];
+    let lastTrailX = 0, lastTrailY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        const dx = e.clientX - lastTrailX;
+        const dy = e.clientY - lastTrailY;
+        if (Math.abs(dx) < 4 && Math.abs(dy) < 4) return;
+        lastTrailX = e.clientX;
+        lastTrailY = e.clientY;
+
+        const dot = document.createElement('div');
+        dot.className = 'trail-dot';
+        dot.style.left = e.clientX + 'px';
+        dot.style.top = e.clientY + 'px';
+        dot.style.background = trailColors[Math.floor(Math.random() * trailColors.length)];
+        document.body.appendChild(dot);
+
+        setTimeout(() => dot.remove(), 800);
+    });
+
+
+    // ── 7. Aurora background ─────────────────────────────────────
+    const aurora = document.createElement('div');
+    aurora.id = 'aurora-bg';
+    document.body.prepend(aurora);
+
+    const blobs = [
+        { el: null, x: 20, y: 80, vx: 0.12, vy: 0.08, color: '99,102,241' },
+        { el: null, x: 60, y: 70, vx: -0.09, vy: 0.11, color: '168,85,247' },
+        { el: null, x: 40, y: 85, vx: 0.07, vy: -0.10, color: '16,185,129' },
+        { el: null, x: 75, y: 75, vx: -0.11, vy: 0.07, color: '59,130,246' },
+    ];
+
+    blobs.forEach((b, i) => {
+        const el = document.createElement('div');
+        el.className = 'aurora-blob';
+        el.style.setProperty('--color', b.color);
+        aurora.appendChild(el);
+        b.el = el;
+    });
+
+    (function animateAurora() {
+        blobs.forEach(b => {
+            b.x += b.vx;
+            b.y += b.vy;
+            if (b.x < 5 || b.x > 95) b.vx *= -1;
+            if (b.y < 55 || b.y > 100) b.vy *= -1;
+            b.el.style.left = b.x + '%';
+            b.el.style.top = b.y + '%';
+        });
+        requestAnimationFrame(animateAurora);
     })();
 
 
